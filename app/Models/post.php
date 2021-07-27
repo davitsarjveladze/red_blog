@@ -22,7 +22,7 @@ class post extends Model
 
     public function user() {
         return $this->hasOne(User::class,'id','author_id')
-            ->select('name');
+            ->select('id','name');
     }
     public function comments() {
         return $this->hasMany(post_comment::class,'post_id');

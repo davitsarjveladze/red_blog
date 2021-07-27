@@ -13,4 +13,6 @@ class post_tag extends Model
         'post_id',
         'tag_id',
     ];
+    public $timestamps = false;
+
 }

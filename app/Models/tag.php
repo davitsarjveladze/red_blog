@@ -12,6 +12,8 @@ class tag extends Model
     protected $fillable = [
         'name',
     ];
+    public $timestamps = false;
+
 
     public function postsId() {
         return $this->hasMany(post_tag::class,'tag_id')
