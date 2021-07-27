@@ -6,6 +6,7 @@ use http\Env\Response;
 use Illuminate\Http\Request;
 use App\Models\Todos;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\TodoCreationRequest;
 
 class TodosController extends Controller
 {
@@ -14,7 +15,7 @@ class TodosController extends Controller
         return response()->json(Todos::where('user_id','=',1)
             ->orderBy('order','asc')->get());
     }
-    function insert(Request $request) {
+    function insert(TodoCreationRequest $request) {
         $todos = new Todos;
         $data = $request->all();
         $todos->title = $data['title'];

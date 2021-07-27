@@ -47,13 +47,31 @@ class PostsToTagSeeder extends Seeder
                 'tag_id' => 2,
             ],
             [
-                'post_id' => 9,
+                'post_id' => 2,
+                'tag_id' => 2,
+            ],
+            [
+                'post_id' => 15,
+                'tag_id' => 2,
+            ],
+            [
+                'post_id' => 11,
                 'tag_id' => 3,
             ],
             [
-                'post_id' => 10,
+                'post_id' => 13,
+                'tag_id' => 3,
+            ],
+            [
+                'post_id' => 1,
+                'tag_id' => 3,
+            ],
+            [
+                'post_id' => 5,
                 'tag_id' => 3,
             ]
+
+
         ]);
     }
 }

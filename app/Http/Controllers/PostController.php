@@ -30,19 +30,20 @@ class PostController extends Controller
                 return $data['post_id'];
             }, array_merge($postIdByTag, $postIdByCategory));
         }
-        if (!empty($postsId)) {
+        if (isset($request['tag']) && isset($request['category'])) {
             $postsId = array_values(array_diff_assoc($postsId, array_unique($postsId)));
         }
         $post = post::with('user')
                 ->select('id','title','img_url','author_id')
                 ->where('published','=',1)
                 ->where('id','>' ,0);
-        if(!empty($postsId)) {
+
+        if(isset($request['tag']) || isset($request['category'])) {
             $post->whereIn('id', $postsId);
         }
 
         return response()->json($post->orderBy('created_at','DESC')
-                                        ->paginate(3));
+                                        ->paginate(6));
 
     }
 
@@ -58,25 +59,15 @@ class PostController extends Controller
     }
 
     public function getCount() {
-        $data = post::where('published','=',1)->get()->count();
-        return response()->json(['count'=>$data]);
+        return response()->json(['count'=>post::where('published','=',1)->get()->count()]);
     }
 
-
-    public function store(Request $request)
-    {
-        $data = post::where('published','=',1)->count();
-        return response()->json(['count'=>$data]);
-    }
 
     public function getDetail($id) {
-
+        return response()->json([post::where('id','=',$id)->with('user')->get()]);
     }
 
-    public function update(Request $request, $id)
-    {
-        //
-    }
+
 
 
 }

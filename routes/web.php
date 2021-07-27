@@ -14,9 +14,3 @@ use App\Http\Controllers\AuthController;
 |
 */
 
-Route::get('/', [PostController::class,'index']);
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::prefix('post')->group(function () {
-    Route::get('/',[PostController::class,'index']);
-});

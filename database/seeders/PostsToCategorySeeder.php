@@ -52,12 +52,68 @@ class PostsToCategorySeeder extends Seeder
                 'post_id' => 12
             ],
             [
+                'categories_id' => 4,
+                'post_id' => 13
+            ],
+            [
+                'categories_id' => 4,
+                'post_id' => 14
+            ],
+            [
+                'categories_id' => 4,
+                'post_id' => 15
+            ],
+            [
+                'categories_id' => 4,
+                'post_id' => 2
+            ],
+            [
                 'categories_id' => 5,
-                'post_id' => 6
+                'post_id' => 16
+            ],
+            [
+                'categories_id' => 5,
+                'post_id' => 10
+            ],
+            [
+                'categories_id' => 5,
+                'post_id' => 13
+            ],
+            [
+                'categories_id' => 5,
+                'post_id' => 4
+            ],
+            [
+                'categories_id' => 5,
+                'post_id' => 5
+            ],
+            [
+                'categories_id' => 5,
+                'post_id' => 11
             ],
             [
                 'categories_id' => 6,
                 'post_id' => 1
+            ],
+            [
+                'categories_id' => 6,
+                'post_id' => 2
+            ],
+            [
+                'categories_id' => 6,
+                'post_id' => 3
+            ],
+            [
+                'categories_id' => 6,
+                'post_id' => 4
+            ],
+            [
+                'categories_id' => 6,
+                'post_id' => 5
+            ],
+            [
+                'categories_id' => 6,
+                'post_id' => 6
             ],
         ]);
     }

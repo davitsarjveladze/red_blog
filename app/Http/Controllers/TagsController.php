@@ -7,6 +7,6 @@ use App\Models\tag;
 class TagsController extends Controller
 {
     public function getAll() {
-        return tag::all();
+        return tag::all()->toArray();
     }
 }
